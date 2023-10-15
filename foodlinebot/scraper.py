@@ -44,7 +44,7 @@ class IFoodie(Food):
                 "div", {"class": "jsx-1002413726 address-row"}).getText()
             
             link = card.find(
-                "a", {"href": "jsx-1002413726 click-tracker"})
+                "a", {"href": "jsx-1002413726 title-text"})
             
             url = link['href']      
             title_with_link = f"<a href='{url}'>{title}</a>"
