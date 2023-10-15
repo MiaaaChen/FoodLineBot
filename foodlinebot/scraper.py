@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 from abc import ABC, abstractmethod
 import requests
+import pyshorteners
+
+s = pyshorteners.Shortener()
 
 # 美食抽象類別
 class Food(ABC):
@@ -45,11 +48,11 @@ class IFoodie(Food):
             
             link = card.find("a", class_="jsx-1002413726 title-text") 
             url = "https://ifoodie.tw" + link['href'] if link else "链接未找到"
-            title_with_link = f"<a href='{url}'>{title}</a>"
-                
+            
+            short_url = s.bitly.short(url)
+                            
 
-            content += f"{title_with_link} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
-        
-        html_message = f"<html>{content}</html>"
+            content += f"{title} - {url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
  
-        return html_message
+
+        return content
