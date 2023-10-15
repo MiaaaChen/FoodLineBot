@@ -38,12 +38,12 @@ class IFoodie(Food):
                 "div", {"class": "jsx-2373119553 text"}).getText()
             
             openinghours = card.find(  # 營業時間
-                "span", {"class": "jsx-1002413726 open-now"}).getText()
+                "div", {"class": "jsx-1002413726 info"}).getText()
  
             address = card.find(  # 餐廳地址
                 "div", {"class": "jsx-1002413726 address-row"}).getText()
                 
 
-            content += f"{title} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
+            content += f"{title} \n{stars}顆星 \n{openinghours} \n{address}"
  
         return content
