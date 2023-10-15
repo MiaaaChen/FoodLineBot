@@ -49,5 +49,7 @@ class IFoodie(Food):
                 
 
             content += f"{title_with_link} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
+        
+        html_message = f"<html>{content}</html>"
  
-        return content
+        return html_message
