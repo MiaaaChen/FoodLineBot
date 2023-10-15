@@ -42,8 +42,13 @@ class IFoodie(Food):
  
             address = card.find(  # 餐廳地址
                 "div", {"class": "jsx-1002413726 address-row"}).getText()
+            
+            link = card.find(
+                "a", {"href": "jsx-1002413726 click-tracker"}).getText()
+        
+            title_with_link = f"<a href='{link}'>{title}</a>"
                 
 
-            content += f"{title} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
+            content += f"{title_with_link} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
  
         return content
