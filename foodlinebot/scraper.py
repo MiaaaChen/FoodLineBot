@@ -5,9 +5,10 @@ import requests
 # 美食抽象類別
 class Food(ABC):
  
-    def __init__(self, area):
-        self.area = area  # 地區
- 
+    def __init__(self, area, category):
+        self.area = area 
+        self.category = category
+
     @abstractmethod
     def scrape(self):
         pass
@@ -19,7 +20,7 @@ class IFoodie(Food):
     def scrape(self):
         response = requests.get(
             "https://ifoodie.tw/explore/" + self.area +
-            "/list?sortby=popular&opening=true")
+            "/list/" + self.type + "?sortby=popular&opening=true")
  
         soup = BeautifulSoup(response.content, "html.parser")
  

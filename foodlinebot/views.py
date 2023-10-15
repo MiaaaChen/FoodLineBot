@@ -32,13 +32,22 @@ def callback(request):
         for event in events:
             if isinstance(event, MessageEvent):  # 如果有訊息事件
 
-                food = IFoodie(event.message.text) #使用者傳入的訊息文字
+                # food = IFoodie(event.message.text) #使用者傳入的訊息文字
 
-                line_bot_api.reply_message(  # 回復傳入的訊息文字
-                    event.reply_token,
-                    TextSendMessage(text=food.scrape())
-                    # TextSendMessage(text=event.message.text)
+                text = event.message.text
+
+                if "類別：" in text and "地區：" in text:
+                    category, area = text.split("類別：")[1].split("地區：")
+
+                    food = IFoodie(area, category)
+                    response = food.scrape()
+
+                    line_bot_api.reply_message(  # 回復傳入的訊息文字
+                        event.reply_token,
+                        TextSendMessage(text=food.scrape())
+                        # TextSendMessage(text=event.message.text)
                 )
+                    
         return HttpResponse()
     else:
         return HttpResponseBadRequest()
