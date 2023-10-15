@@ -46,7 +46,14 @@ def callback(request):
                         event.reply_token,
                         TextSendMessage(text=response)
                         # TextSendMessage(text=event.message.text)
-                )
+                    )
+
+                else:
+                    response = "請按照以下格式輸入：\n地區：XXX 類別：YYY"
+                    line_bot_api.reply_message(
+                        event.reply_token,
+                        TextSendMessage(text=response)
+                    )
                     
         return HttpResponse()
     else:
