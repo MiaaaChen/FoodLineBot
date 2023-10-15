@@ -28,7 +28,9 @@ SECRET_KEY = 'django-insecure-3fh%a%dnclwci#vqlyr=fh0i3ko+2@$2a9(g^j_g(!wp-_#7@7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'foodlinebot-ktj1.onrender.com'
+]
 
 
 # Application definition
