@@ -36,8 +36,8 @@ def callback(request):
 
                 text = event.message.text
 
-                if "地區：" in text and "類別：" in text:
-                    category, area = text.split("地區：")[1].split("類別：")
+                if "地區=" in text and "類別=" in text:
+                    category, area = text.split("地區=")[1].split("類別=")
 
                     food = IFoodie(area, category)
                     response = food.scrape()
