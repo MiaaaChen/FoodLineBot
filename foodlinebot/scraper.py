@@ -20,7 +20,7 @@ class IFoodie(Food):
     def scrape(self):
         response = requests.get(
             "https://ifoodie.tw/explore/" + self.area +
-            "/list/" + self.type + "?sortby=popular&opening=true")
+            "/list/" + self.category + "?sortby=popular&opening=true")
  
         soup = BeautifulSoup(response.content, "html.parser")
  
