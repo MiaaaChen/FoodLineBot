@@ -44,6 +44,6 @@ class IFoodie(Food):
                 "div", {"class": "jsx-1002413726 address-row"}).getText()
                 
 
-            content += f"{title} \n{stars}顆星 \n{openinghours} \n{address} \n"
+            content += f"{title} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
  
         return content
