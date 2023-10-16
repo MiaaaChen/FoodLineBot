@@ -51,7 +51,7 @@ class IFoodie(Food):
             
             short_url = s.bitly.short(url)                
 
-            content += f"{title} - {url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
+            content += f"{title} - {short_url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
  
 
         return content
