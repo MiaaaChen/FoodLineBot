@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 import requests
 import pyshorteners
 
-s = pyshorteners.Shortener()
+s = pyshorteners.Shortener(api_key = "cd1b8bc8ce0c839335d457ed8f4a50c69aad8e9c")
 
 # 美食抽象類別
 class Food(ABC):
