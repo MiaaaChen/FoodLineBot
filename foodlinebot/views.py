@@ -21,7 +21,7 @@ def callback(request):
         body = request.body.decode('utf-8')
  
         try:
-            events = parser.parse(body, signature)  # 傳入的事件
+            events = parser.parse(body, signature) 
             print(events)
 
         except InvalidSignatureError:
@@ -30,9 +30,7 @@ def callback(request):
             return HttpResponseBadRequest()
  
         for event in events:
-            if isinstance(event, MessageEvent):  # 如果有訊息事件
-
-                # food = IFoodie(event.message.text) #使用者傳入的訊息文字
+            if isinstance(event, MessageEvent):  
 
                 text = event.message.text
 
@@ -42,10 +40,9 @@ def callback(request):
                     food = IFoodie(area, category)
                     response = food.scrape()
 
-                    line_bot_api.reply_message(  # 回復傳入的訊息文字
+                    line_bot_api.reply_message(  
                         event.reply_token,
                         TextSendMessage(text=response)
-                        # TextSendMessage(text=event.message.text)
                     )
 
                 else:

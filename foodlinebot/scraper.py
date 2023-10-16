@@ -5,7 +5,6 @@ import pyshorteners
 
 s = pyshorteners.Shortener()
 
-# 美食抽象類別
 class Food(ABC):
  
     def __init__(self, area, category):
@@ -17,7 +16,6 @@ class Food(ABC):
         pass
  
  
-# 愛食記爬蟲
 class IFoodie(Food):
  
     def scrape(self):
@@ -27,23 +25,23 @@ class IFoodie(Food):
  
         soup = BeautifulSoup(response.content, "html.parser")
  
-        # 爬取前五筆餐廳卡片資料
+
         cards = soup.find_all(
             'div', {'class': 'jsx-1002413726 restaurant-info'}, limit=5)
  
         content = ""
         for card in cards:
  
-            title = card.find(  # 餐廳名稱
+            title = card.find(  
                 "a", {"class": "jsx-1002413726 title-text"}).getText()
  
-            stars = card.find(  # 餐廳評價
+            stars = card.find(  
                 "div", {"class": "jsx-2373119553 text"}).getText()
             
-            openinghours = card.find(  # 營業時間
+            openinghours = card.find( 
                 "div", {"class": "jsx-1002413726 info"}).getText()
  
-            address = card.find(  # 餐廳地址
+            address = card.find( 
                 "div", {"class": "jsx-1002413726 address-row"}).getText()
             
             link = card.find("a", class_="jsx-1002413726 title-text") 
