@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 import requests
 import pyshorteners
 
-s = pyshorteners.Shortener(api_key = "cd1b8bc8ce0c839335d457ed8f4a50c69aad8e9c")
+s = pyshorteners.Shortener()
 
 # 美食抽象類別
 class Food(ABC):
@@ -49,9 +49,9 @@ class IFoodie(Food):
             link = card.find("a", class_="jsx-1002413726 title-text") 
             url = "https://ifoodie.tw" + link['href'] if link else "链接未找到"
             
-            short_url = s.bitly.short(url)                
+            short_url = s.tinyurl.short(url)                
 
-            content += f"{title} - {short_url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
+            content += f"{title} \n{short_url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
  
 
         return content
