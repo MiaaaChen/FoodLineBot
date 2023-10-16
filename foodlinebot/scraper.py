@@ -36,6 +36,7 @@ class IFoodie(Food):
  
             title = card.find(  # 餐廳名稱
                 "a", {"class": "jsx-1002413726 title-text"}).getText()
+            bold_title = f"<b>{title}</b>"
  
             stars = card.find(  # 餐廳評價
                 "div", {"class": "jsx-2373119553 text"}).getText()
@@ -51,7 +52,7 @@ class IFoodie(Food):
             
             short_url = s.tinyurl.short(url)                
 
-            content += f"{title} \n{short_url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
+            content += f"{bold_title} \n{short_url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
  
 
         return content
