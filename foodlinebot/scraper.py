@@ -49,8 +49,7 @@ class IFoodie(Food):
             link = card.find("a", class_="jsx-1002413726 title-text") 
             url = "https://ifoodie.tw" + link['href'] if link else "链接未找到"
             
-            short_url = s.bitly.short(url)
-                            
+            short_url = s.bitly.short(url)                
 
             content += f"{title} - {url} \n{stars}顆星 \n{openinghours} \n{address} \n\n"
  
