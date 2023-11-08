@@ -19,9 +19,13 @@ pip install pyshorteners
 ### Step 2. Create a web service in Render
 1. Link with Github and connect to Git repository.
    ![](https://imgur.com/zM3jzMD.png)
-2. Type $ gunicorn mylinebot.wsgi:application in Start Command
+2. Type $ gunicorn mylinebot.wsgi:application in Start Command  
+   ˋˋˋ  
+   gunicorn mylinebot.wsgi:application  
+   ˋˋˋ  
+   
    ![](https://imgur.com/d0QvEND.png)
-3. Add two environment variables in Advanced Setting.  
+4. Add two environment variables in Advanced Setting.  
    - LINE_CHANNEL_ACCESS_TOKEN  
    - LINE_CHANNEL_SECRET
    ![](https://imgur.com/e2ts7Jr.png)
