@@ -3,12 +3,13 @@ It's a LINE Bot that provides users with information about nearby restaurants ca
 
 
 ## Installation
+```
 pip install django  
 pip install line-bot-sdk   
 pip install requests  
 pip install beautifulsoup4    
 pip install pyshorteners  
-
+```
 
 ## Usage
 ### Step 1. Create a provider in LINE Developers 
@@ -20,8 +21,9 @@ pip install pyshorteners
 1. Link with Github and connect to Git repository.
    ![](https://imgur.com/zM3jzMD.png)
 2. Type $ gunicorn mylinebot.wsgi:application in Start Command  
- 
-    gunicorn mylinebot.wsgi:application  
+   ```
+   gunicorn mylinebot.wsgi:application
+   ```
  
    ![](https://imgur.com/d0QvEND.png)
 4. Add two environment variables in Advanced Setting.  
@@ -36,7 +38,10 @@ pip install pyshorteners
    ![](https://imgur.com/PIMpXri.png)
 
 ### Step 4. Run the server and Deploy the service
-1. Execute $ Python manage.py runserver
+1. Execute $ python manage.py runserver
+   ```
+   python3 manage.py sunserver
+   ```
    ![](https://imgur.com/8JYEfgx.png)
 2. Deploy web service
    ![](https://imgur.com/rnEJSsT.png)
