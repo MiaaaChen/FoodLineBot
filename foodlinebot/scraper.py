@@ -27,24 +27,24 @@ class IFoodie(Food):
  
 
         cards = soup.find_all(
-            'div', {'class': 'jsx-1002413726 restaurant-info'}, limit=5)
+            'div', {'class': 'jsx-1309326380 restaurant-info'}, limit=5)
  
         content = ""
         for card in cards:
  
             title = card.find(  
-                "a", {"class": "jsx-1002413726 title-text"}).getText()
+                "a", {"class": "jsx-1309326380 title-text"}).getText()
  
             stars = card.find(  
-                "div", {"class": "jsx-2373119553 text"}).getText()
+                "div", {"class": "jsx-1309326380 text"}).getText()
             
             openinghours = card.find( 
-                "div", {"class": "jsx-1002413726 info"}).getText()
+                "div", {"class": "jsx-1309326380 info"}).getText()
  
             address = card.find( 
-                "div", {"class": "jsx-1002413726 address-row"}).getText()
+                "div", {"class": "jsx-1309326380 address-row"}).getText()
             
-            link = card.find("a", class_="jsx-1002413726 title-text") 
+            link = card.find("a", class_="jsx-1309326380 title-text") 
             url = "https://ifoodie.tw" + link['href'] if link else "鏈結未找到"
             
             short_url = s.tinyurl.short(url)                
