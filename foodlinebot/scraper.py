@@ -26,6 +26,7 @@ class IFoodie(Food):
         soup = BeautifulSoup(response.content, "html.parser")
  
 
+        # check the HTML page source code and correct the JSX
         cards = soup.find_all(
             'div', {'class': 'jsx-1309326380 restaurant-info'}, limit=5)
  
@@ -36,7 +37,7 @@ class IFoodie(Food):
                 "a", {"class": "jsx-1309326380 title-text"}).getText()
  
             stars = card.find(  
-                "div", {"class": "jsx-1309326380 text"}).getText()
+                "div", {"class": "jsx-2373119553 text"}).getText()
             
             openinghours = card.find( 
                 "div", {"class": "jsx-1309326380 info"}).getText()
