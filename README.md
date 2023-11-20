@@ -1,5 +1,6 @@
 # FoodLineBot
-It's a LINE Bot that provides users with information about nearby restaurants categorized by food type.
+It's a LINE Bot provides users with information and reviews of popular restaurants in a specified area.
+
 
 
 ## Installation
