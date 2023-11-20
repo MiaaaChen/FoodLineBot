@@ -45,7 +45,7 @@ class IFoodie(Food):
                 "div", {"class": "jsx-1002413726 address-row"}).getText()
             
             link = card.find("a", class_="jsx-1002413726 title-text") 
-            url = "https://ifoodie.tw" + link['href'] if link else "链接未找到"
+            url = "https://ifoodie.tw" + link['href'] if link else "鏈結未找到"
             
             short_url = s.tinyurl.short(url)                
 
