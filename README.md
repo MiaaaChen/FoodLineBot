@@ -1,6 +1,6 @@
 # FoodLineBot
 It's a LINE Bot provides users with information and reviews of popular restaurants in a specified area.  
-[![FoodLineBot](https://imgur.com/SOObnWY)](https://youtu.be/0D_wWjq82zk)
+[![FoodLineBot](https://imgur.com/SOObnWY.png)](https://youtu.be/0D_wWjq82zk)
 
 
 
