@@ -42,7 +42,7 @@ pip install pyshorteners
 ### Step 4. Run the server and Deploy the service
 1. Execute $ python manage.py runserver
    ```
-   python3 manage.py sunserver
+   python3 manage.py runserver
    ```
    ![](https://imgur.com/8JYEfgx.png)
 2. Deploy web service
