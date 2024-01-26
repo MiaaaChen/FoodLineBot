@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
-LINE_CHANNEL_ACCESS_TOKEN = 'Your_access_token'
-LINE_CHANNEL_SECRET = 'Your_channel_secret'
+LINE_CHANNEL_ACCESS_TOKEN = 'UTex2ib9IqANJKy3o4PzPoP77HF8xsZVZvwuy60/s1qtE2KbTJ+MoATgu9RikRMCKCbYohnk3wkanBTAkOai1OxyIPwEjqR5dQxr2Xqa7zHhrXBnhYkpcAaFhnZX2qxg6pnAxs8CE9VI2q36xwhLogdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET = 'd455f326c36d9fefbf85d49ecb635e35'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
